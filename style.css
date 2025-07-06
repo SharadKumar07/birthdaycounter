@@ -1,38 +1,120 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to top, #ffe0ec, #ffffff);
-  text-align: center;
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #ffe0ec, #ffffff);
+  text-align: center;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main container */
 .container {
   padding: 2rem;
+  max-width: 600px;
+  margin: auto;
 }
 
+/* Heading */
 h1 {
   color: #d63384;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* Countdown Section */
 #countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
 }
 
+#countdown div {
+  flex: 1 1 40%;
+  background-color: #fff0f5;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  white-space: nowrap; /* Keeps "23 Days" together */
+}
+
+/* Number & Label inside countdown */
+.count-number {
+  font-weight: bold;
+  margin-right: 0.3rem;
+  font-size: 2rem;
+  color: #d63384;
+}
+
+.count-label {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+/* Fact Section */
 #fact-section {
   background-color: #f8f9fa;
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fact-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#fact {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Image Section */
+#image-section {
+  margin-top: 1.5rem;
 }
 
 #image-section img {
-  max-width: 80%;
+  width: 100%;
+  max-width: 100%;
   border-radius: 15px;
-  margin-top: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #countdown {
+    font-size: 1.2rem;
+  }
+
+  #countdown div {
+    flex: 1 1 100%;
+  }
+
+  .count-number {
+    font-size: 1.5rem;
+  }
+
+  .count-label {
+    font-size: 0.95rem;
+  }
+
+  #fact {
+    font-size: 0.95rem;
+  }
 }
