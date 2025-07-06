@@ -43,7 +43,8 @@ fetch('data/facts.json')
   .then(facts => {
     const today = new Date();
   //  const index = today.getDate() % facts.length;
-	const index = Math.min(today.getDate() - 1, facts.length - 1);
+  //const index = Math.min(today.getDate() - 1, facts.length - 1);
+	const index = (new Date().getDate() - 1) % facts.length;
 	console.log("Today's index:", index);
   console.log("Selected fact item:", facts[index]);
 
